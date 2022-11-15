@@ -50,14 +50,35 @@
 		function clearTitleList() {
 			titleList.innerHTML = '';
 		}
-        clearTitleList();
+		clearTitleList();
 		/* for each article */
-        
-		/* get the article id */
-		/* find the title element */
-		/* get the title from the title element */
-		/* create HTML of the link */
-		/* insert link into titleList */
+		const articles = document.querySelectorAll(optArticleSelector);
+		console.log(articles);
+        /* find all the articles and save them to variable: articles */
+		let html = '';
+
+		for (let article of articles) {
+			/* get the article id */
+			const articleId = article.getAttribute('id');
+			console.log(articleId);
+			/* find the title element */
+			const articleTitle =
+				article.querySelector(optTitleSelector).innerHTML;
+			/* get the title from the title element */
+			console.log('title', articleTitle);
+			/* create HTML of the link */
+			const linkHTML =
+				'<li><a href="#' +
+				articleId +
+				'"><span>' +
+				articleTitle +
+				'</span></a></li>';
+			console.log(linkHTML);
+			/* insert link into html variable */
+			html = html + linkHTML;
+			console.log(html);
+		}
+		titleList.innerHTML = html;
 	}
 
 	generateTitleLinks();
