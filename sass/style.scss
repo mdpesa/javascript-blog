@@ -56,6 +56,7 @@ body {
 
 .posts {
 	flex: 2 0 0;
+	/*position: relative;*/
 }
 
 .sidebar,
@@ -106,8 +107,14 @@ body {
 
 .post {
 	display: none;
+	/*opacity: 0;
+	position: absolute;
+	z-index: -1;
+    transition: 1s;*/
 	&.active {
 		display: block;
+		/*opacity: 1;
+		z-index: 1;*/
 	}
 }
 
