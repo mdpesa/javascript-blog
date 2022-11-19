@@ -37,8 +37,8 @@ const titleClickHandler = function (event) {
 const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles',
-  optArticleTagsSelector = '.post-tags .list';
-optArticleAuthorSelector = '.post-author';
+  optArticleTagsSelector = '.post-tags .list',
+  optArticleAuthorSelector = '.post-author';
 function generateTitleLinks(customSelector = '') {
   /* [DONE] remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
