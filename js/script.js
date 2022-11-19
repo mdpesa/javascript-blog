@@ -38,7 +38,7 @@ const optArticleSelector = '.post',
   optTitleSelector = '.post-title',
   optTitleListSelector = '.titles',
   optArticleTagsSelector = '.post-tags .list';
-
+  optArticleAuthorSelector = '.post-author';
 function generateTitleLinks(customSelector = '') {
   /* [DONE] remove contents of titleList */
   const titleList = document.querySelector(optTitleListSelector);
@@ -161,6 +161,25 @@ function addClickListenersToTags() {
 addClickListenersToTags();
 
 function generateAuthors() {
-  
+  /* find all articles */
+  const articles = document.querySelectorAll(optArticleSelector);
+  /* START LOOP: for every article: */
+  for (let article of articles) {
+    /* find author wrapper */
+    const authorWrapper = article.querySelector(optArticleAuthorSelector);
+    console.log(authorWrapper);
+    /* make html variable with empty string */
+    let html = ' ';
+    /* get author from data-author attribute */
+    const author = article.getAttribute('data-author');
+    console.log(author);
+    /* generate HTML of the link */
+    const linkHTML = '<a href="#author-' + author + '">' + author + '</a>';
+    console.log(linkHTML);
+    /* add generated code to html variable */
+    html = html + linkHTML;
+    /*insert HTML code into the author wrapper*/
+    authorWrapper.innerHTML = html;
+  }
 }
 generateAuthors();
