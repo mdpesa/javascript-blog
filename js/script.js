@@ -128,9 +128,9 @@ function tagClickHandler(event) {
   /* find all tag links with class active */
   const activeTags = document.querySelectorAll('a.active[href^="#tag-"]');
   /* START LOOP: for each active tag link */
-  for (activeTag of activeTags) {
+  for (let activeTag of activeTags) {
     /* remove class active */
-    const activeTag = classList.remove('active');
+    activeTag.classList.remove('active');
     console.log(activeTag);
     /* END LOOP: for each active tag link */
   }
@@ -159,3 +159,8 @@ function addClickListenersToTags() {
 }
 
 addClickListenersToTags();
+
+function generateAuthors() {
+  
+}
+generateAuthors();
