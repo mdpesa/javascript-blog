@@ -212,3 +212,15 @@ function authorClickHandler(event) {
   /* execute function "generateTitleLinks" with article selector as argument */
   generateTitleLinks('[data-author="' + author + '"]');
 }
+
+function addClickListenersToAuthors() {
+  /* find all links to authors */
+  const authorLinks = document.querySelectorAll('a[href^="#author-"]');
+  /* START LOOP: for each link */
+  for (let authorLink of authorLinks) {
+    /* add tagClickHandler as event listener for that link */
+    authorLink.addEventListener('click', authorClickHandler);
+    /* END LOOP: for each link */
+  }
+}
+addClickListenersToAuthors();
