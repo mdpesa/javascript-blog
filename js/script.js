@@ -168,18 +168,14 @@ function generateAuthors() {
     /* find author wrapper */
     const authorWrapper = article.querySelector(optArticleAuthorSelector);
     console.log(authorWrapper);
-    /* make html variable with empty string */
-    let html = ' ';
     /* get author from data-author attribute */
     const author = article.getAttribute('data-author');
     console.log(author);
     /* generate HTML of the link */
     const linkHTML = '<a href="#author-' + author + '">' + author + '</a>';
     console.log(linkHTML);
-    /* add generated code to html variable */
-    html = html + linkHTML;
     /*insert HTML code into the author wrapper*/
-    authorWrapper.innerHTML = html;
+    authorWrapper.innerHTML = linkHTML;
   }
 }
 generateAuthors();
