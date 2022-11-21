@@ -129,3 +129,30 @@ body {
     margin: 0 10px 0 0;
   }
 }
+
+.tags {
+  li {
+    display: inline;
+    padding-right: 5px;
+  }
+  .tag-size-1 {
+    font-size: 18px;
+    color: black;
+  }
+  .tag-size-2 {
+    font-size: 125%;
+    color: rgb(235, 126, 2);
+  }
+  .tag-size-3 {
+    font-size: 150%;
+    color: rgb(35, 95, 0);
+  }
+  .tag-size-4 {
+    font-size: 175%;
+    color: rgb(2, 65, 124);
+  }
+  .tag-size-5 {
+    font-size: 200%;
+    color: rgb(141, 4, 146);
+  }
+}
